@@ -15,7 +15,7 @@ module.exports = function() {
 	mongoose.Promise = global.Promise;
 
 	if (mongoose.connection.readyState !== 1) {
-		logger.info("Connecting to Mongo " + config.db.uri + "...");
+		logger.info("Connecting to Mongo " + config.db.uri + "..."); // hbkhbk mongo connect
 		db = mongoose.connect(config.db.uri, config.db.options, function mongoAfterConnect(err) {
 			if (err) {
 				logger.error("Could not connect to MongoDB!");

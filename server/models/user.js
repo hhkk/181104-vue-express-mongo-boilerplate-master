@@ -33,7 +33,7 @@ let validateLocalStrategyProperty = function(property) {
 let validateLocalStrategyPassword = function(password) {
 	return this.provider !== "local" || (password && password.length >= 6);
 };
-
+// hbkhbk user mongoose schema
 let UserSchema = new Schema({
 	fullName: {
 		type: String,

@@ -1,5 +1,5 @@
 "use strict";
-
+// hbkhbk first breakpoint allowed
 global.WEBPACK_BUNDLE = false;
 
 let config		= require("./config");
@@ -15,7 +15,7 @@ logger.info(chalk.bold("Application root path: ") + global.rootPath);
 
 let init		= require("./core/init");
 let db 			= require("./core/mongo")();
-let app 		= require("./core/express")(db);
+let app 		= require("./core/express")(db); // hbkhbk
 let agenda 		= require("./core/agenda");
 
 require("./libs/gracefulExit");

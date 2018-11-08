@@ -1,5 +1,6 @@
 extends ../layout
 
+
 block styles
 	// Site stylesheet
 	link(rel='stylesheet', href='/app/styles/frontend.css')
@@ -13,7 +14,9 @@ block content
 				form(action='/signup', method='POST')
 					input(type="hidden", name="_csrf" value=_csrf)
 
+					header= t("SignUphbkHbk")
 					header= t("SignUp")
+
 					.form-group
 						label(for='name')= t("NameSC")
 						input(type='text', name='name', id='name', placeholder=t("YourName"), autofocus=true, required)

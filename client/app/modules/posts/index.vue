@@ -1,11 +1,12 @@
 <template lang="pug">
+this is /Users/hkon/utd/181104icebob/vue-express-mongo-boilerplate-master/client/app/modules/posts/index.vue
 	.container
-		h2.title {{ _('Posts') }}
+		h2.title {{ _('Postshbk') }}
 
 		.header.flex.row.justify-space-between
 			.group.sort
 				a.link(@click="changeSort('-votes')", :class="{ active: sort == '-votes' }") {{ _("Hot") }}
-				a.link(@click="changeSort('-views')", :class="{ active: sort == '-views' }") {{ _("MostViewed") }}
+				a.link(@click="changeSort('-views')", :class="{ active: sort == '-views' }") {{ _("MostViewedhbk") }}
 				a.link(@click="changeSort('-createdAt')", :class="{ active: sort == '-createdAt' }") {{ _("New") }}
 
 			button.button.primary(@click="newPost")
@@ -104,7 +105,7 @@
 							required: true,
 							placeholder: this._("TitleOfPost"),
 							validator: validators.string
-						},				
+						},
 						{
 							type: "textArea",
 							label: this._("Content"),
@@ -163,11 +164,11 @@
 				 * @param  {Object} res Post object
 				 */
 				removed(res) {
-					this.removed(res.data);	
+					this.removed(res.data);
 					toast.success(this._("PostNameDeleted", res), this._("PostDeleted"));
 				}
 			}
-		},	
+		},
 
 		methods: {
 			...mapActions("posts", [
@@ -195,7 +196,7 @@
 			toggleVote(post) {
 				if (this.iVoted(post))
 					this.unVote(post);
-				else 
+				else
 					this.vote(post);
 			},
 
@@ -245,7 +246,7 @@
 					if (el)
 						el.focus();
 				});
-			},			
+			},
 
 			savePost() {
 				if (this.$refs.form.validate()) {
@@ -364,9 +365,9 @@
 				}
 			}
 
-			.media-content {				
+			.media-content {
 				overflow-x: auto;
-				
+
 				h3 {
 					margin: 0 0 0.5em 0;
 				}
